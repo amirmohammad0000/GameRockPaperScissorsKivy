@@ -1,0 +1,47 @@
+MDScreen:
+    MDLabel:
+        text: "Clicked In Rock or Paper or Scissors"
+        pos_hint: {"center_y":0.9}
+        halign: "center"
+        font_size: 25
+
+    MDIconButton:
+        icon: "images/rock.png"
+        pos_hint: {"center_x": 0.3, "center_y": 0.75}
+        size_hint: [0.2, 0.2]
+        on_press:
+            app.add_rock()
+            app.get_result()
+
+    MDIconButton:
+        icon: "images/paper.png"
+        pos_hint: {"center_x": 0.5, "center_y": 0.75}
+        size_hint: [0.2, 0.21]
+        on_press:
+            app.add_paper()
+            app.get_result()
+
+    MDIconButton:
+        icon: "images/scissors.png"
+        pos_hint: {"center_x": 0.7, "center_y": 0.75}
+        size_hint: [0.2, 0.25]
+        on_press:
+            app.add_scissors()
+            app.get_result()
+
+    MDCard:
+        id: md_card_result
+        orientation: "vertical"
+        padding: "10dp"
+        size_hint: [0.9, 0.5]
+        pos_hint: {"center_x": 0.5, "center_y": 0.3}
+
+        MDLabel:
+            id: result
+            halign: "center"
+            font_size: 30
+
+        MDLabel:
+            id: result_score
+            halign: "center"
+            font_size: 30
